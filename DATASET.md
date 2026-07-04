@@ -46,7 +46,7 @@ Coordinates are normalized to image width/height.
 
 ## Training Split Used
 
-The automated training pipeline normalized the dataset into:
+The automated training pipeline recorded this normalized split in the project run summary:
 
 | Split | Images |
 |---|---:|
@@ -54,7 +54,7 @@ The automated training pipeline normalized the dataset into:
 | Validation | 802 |
 | Test | 829 |
 
-The final model metrics in this package are from the saved validation and test evaluations.
+The exact source images are not included in this package. The final model metrics in `metadata/metrics.json` are from the saved validation and test evaluations.
 
 ## Redistribution Note
 
@@ -63,4 +63,3 @@ This package includes model weights and derived evaluation artifacts, but it doe
 ## Known Label-Taxonomy Warning
 
 Other PCB datasets may use different class names for similar visual defects. For example, a dataset may label a hole-like defect as `damaged` while this model predicts `missing_hole`. Always compare taxonomy definitions before interpreting model accuracy across datasets.
-
