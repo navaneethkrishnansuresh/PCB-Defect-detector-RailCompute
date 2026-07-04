@@ -18,7 +18,11 @@ Detects: `mouse_bite`, `spur`, `missing_hole`, `short`, `open_circuit`, `spuriou
 
 ## What This Is
 
-This is a compact open-source-style computer-vision release package for a PCB defect detector. It includes:
+This is a compact open-source-style computer-vision release package for a PCB defect detector.
+
+The model was created as a **RailCompute vibe-training showcase**: a plain-English training request went in, and the automated workflow handled the AI/ML training path from data preparation to final model evaluation and packaging. In this context, "no human in the loop" means there was no manual training-loop engineering or hand-tuned model iteration between dataset prep, model training, validation/test evaluation, and artifact delivery.
+
+It includes:
 
 - trained weights in PyTorch and ONNX formats,
 - a simple one-image inference script,
@@ -38,6 +42,25 @@ Metric disclosure:
 - The model weights are included in `weights/`.
 - File hashes are listed in `CHECKSUMS.txt`.
 - The narrative text around RailCompute is based on RailCompute's public website and this demo workflow.
+
+## Sample Outputs
+
+Six example before/after outputs from the trained detector. Each sample shows the original PCB crop on the left and the model output on the right with bounding boxes, class labels, confidence, glow, and heatmap-style emphasis.
+
+<table>
+  <tr>
+    <td width="50%"><img src="assets/sample_outputs/case_01.png" alt="PCB defect detector sample output 1"></td>
+    <td width="50%"><img src="assets/sample_outputs/case_02.png" alt="PCB defect detector sample output 2"></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="assets/sample_outputs/case_03.png" alt="PCB defect detector sample output 3"></td>
+    <td width="50%"><img src="assets/sample_outputs/case_04.png" alt="PCB defect detector sample output 4"></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="assets/sample_outputs/case_05.png" alt="PCB defect detector sample output 5"></td>
+    <td width="50%"><img src="assets/sample_outputs/case_06.png" alt="PCB defect detector sample output 6"></td>
+  </tr>
+</table>
 
 ## RailCompute Showcase
 
@@ -221,6 +244,9 @@ pcb-defect-detector-railcompute/
     best.pt
     best.onnx
   assets/
+    sample_outputs/
+      case_01.png
+      ...
     test_metrics_summary.png
     per_class_map50_95.png
     training_metric_curves.png
