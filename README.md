@@ -20,7 +20,7 @@ Detects: `mouse_bite`, `spur`, `missing_hole`, `short`, `open_circuit`, `spuriou
 
 This is a compact open-source-style computer-vision release package for a PCB defect detector.
 
-The model was created as a **RailCompute vibe-training showcase**: a plain-English training request went in, and the automated workflow handled the AI/ML training path from data preparation to final model evaluation and packaging. In this context, "no human in the loop" means there was no manual training-loop engineering or hand-tuned model iteration between dataset prep, model training, validation/test evaluation, and artifact delivery.
+The model was created as a **RailCompute vibe-training showcase**: a plain-English training request went in, and the automated workflow handled the AI/ML training path from data preparation and cleaning, model-training planning, to training supervision to final model evaluation and packaging with no human in the loop. In this context, "no human in the loop" means there was no manual training-loop engineering/infra-setup/gpu-setup/planning/hand-tuned model iteration between dataset prep, model training, validation/test evaluation, and artefact delivery.
 
 It includes:
 
@@ -62,9 +62,9 @@ Six example before/after outputs from the trained detector. Each sample shows th
   </tr>
 </table>
 
-## RailCompute Showcase
+## About RailCompute
 
-[RailCompute](https://railcompute.com/) is being built to let non-technical teams train AI/ML models using natural language. The idea is simple: describe the model you want, approve the plan, and let the training agent handle data preparation, model choice, GPU setup, training, evaluation, packaging, and reporting.
+[RailCompute](https://railcompute.com/) is an agentic autonomous platform for fine-tuning AI models for teams and operators. The idea is simple: describe the use case you want to train a  model for with any constraints (if any), approve the plan, and let the training agent handle data preparation, model choice, GPU setup, training, evaluation, packaging, and reporting.
 
 As of this release, RailCompute is still in private beta/build stage. The public website has an early-access waitlist:
 
@@ -73,6 +73,10 @@ As of this release, RailCompute is still in private beta/build stage. The public
 This PCB defect detector is an example of what that workflow can look like: a natural-language request was turned into a trained model, evaluation report, weights, inference script, and release package.
 
 ---
+
+Watch the full video here on **how we trained a PCB defect detector using RailCompute in plain natural language**: [Watch the video](https://youtu.be/wFrVj07nMIE)
+
+[![Watch the video](https://img.youtube.com/vi/wFrVj07nMIE/maxresdefault.jpg)](https://youtu.be/wFrVj07nMIE)
 
 ## Quick Start
 
